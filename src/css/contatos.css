@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,900);
+body {
+	font-family: Poppins;
+	font-weight: 300;margin: 0;
+		padding: 0;
+}
+*,:before,:after{
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+h1 {
+  text-align: center;
+  line-height: 20px;
+  color: rgba(0,0,0,.8);
+}
+
+.social-container-wrap {width:100%;height:600px;margin:auto;background:#0f0f11;padding:50px 0;-webkit-transition: all .2s ease-out;
+-moz-transition: all .2s ease-out;
+-ms-transition: all .2s ease-out;
+-o-transition: all .2s ease-out;
+transition: all .2s ease-out;}
+        .social-container {
+            margin: 0 auto;
+            width: 285px;
+            height: 260px;
+            padding-left: 30px;
+            -webkit-transition: all .2s ease-in;
+            -moz-transition: all .2s ease-in;
+            -ms-transition: all .2s ease-in;
+            -o-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+            text-align: center;
+            -webkit-transition: -webkit-transform .7s;
+            -moz-transition: -moz-transform .7s;
+            -ms-transition: -ms-transform .7s;
+            -o-transition: -o-transform .7s;
+            transition: transform .7s;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+/* Button Styles */
+.social-container a {
+display: block;
+position:relative;
+	height: 4em;
+	width: 4em;
+    line-height: 4em;
+    float:left;
+	margin-right:20px;
+	margin-top:20px;
+	text-align: center;    
+    border: 1px solid rgba(255,255,255,.3);
+    color: rgba(255,255,255,.6);
+                -webkit-transition: -webkit-transform .7s;
+	-moz-transition: -moz-transform .7s;
+	-ms-transition: -ms-transform .7s;
+	-o-transition: -o-transform .7s;
+	transition: transform .7s;
+}
+.social-container .twitter{color:#00aced;border-color:#00aced;}
+.social-container .facebook{color:#3b5998;border-color:#3b5998;}
+.social-container .googleplus{color:#dd4b39;border-color:#dd4b39;}
+.social-container .pinterest{color:#cc2127;border-color:#cc2127;}
+.social-container .dribbble{color:#ea4c89;border-color:#ea4c89;}
+.social-container .instagram{color:#5c3d2e;border-color:#5c3d2e;}
+.social-container .linkedin{color:#007fb1;border-color:#007fb1;}
+.social-container .envelope{color:#aaca62;border-color:#aaca62;}
+.social-container .codepen{color:#f5f50c;border-color:#f5f50c;}
+.social-container a i {
+-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.social-container a:hover  {
+    background:transparent;
+    border: 1px solid rgba(255,255,255,.5);
+    color: rgba(255,255,255,1);
+  -webkit-transform: scale(1.3,1.3);
+	-moz-transform: scale(1.3,1.3);
+  -ms-transform: scale(1.3,1.3);
+	-o-transform: scale(1.3,1.3);
+  transform: scale(1.3,1.3) ;
+}
+.social-container .codepen:hover {color:rgba(0,0,0,.8);border-color:rgba(0,0,0,.8);}
+/* Hover background colors */
+.color-twitter {background-color: #00aced !important;}
+.color-facebook {background-color: #3b5998 !important;}
+.color-pinterest {background-color: #cc2127 !important;}
+.color-googleplus {background-color: #dd4b39 !important;}
+.color-codepen{background-color:rgba(255,255,255,1) !important;}
+.color-dribbble {background-color: #ea4c89 !important;}
+.color-instagram {background-color: #5c3d2e !important;}
+.color-linkedin{background-color:#007fb1 !important;}
+.color-envelope{background-color:#aaca62 !important;}
+
+
+        .color-twitter,.color-facebook,.color-pinterest,.color-googleplus,.color-dribbble,.color-instagram {
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
