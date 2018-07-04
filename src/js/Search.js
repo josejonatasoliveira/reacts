@@ -1,57 +1,50 @@
-import React from "react";
+import React, { Component } from "react";
 
-
-
-const Search = () => {
-  return (
-      <div style={{"margin-top":"70px"}}>
-        
+export default class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      repos: []
+    };
+  }
+  render() {
+    return (
+      <div style={{ "margin-top": "70px" }}>
         <form className="form-inline my-2 my-lg-0 container">
           <input
             className="form-control mr-sm-2"
             type="search"
-            style={{ "min-width": "410px" }}
+            style={{ "min-width": "380px" }}
             placeholder="Pesquisar eventos"
             aria-label="Search"
           />
           <input
             className="form-control mr-sm-2"
             type="search"
-            style={{ "min-width": "410px" }}
+            style={{ "min-width": "380px" }}
             placeholder="Pesquisar por cidade"
             aria-label="Search"
           />
           <div className="btn-group">
-            <button
-              type="button"
-              className="btn btn-outline-primary"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+            <select
+              class="custom-select"
+              id="inputGroupSelect01"
+              style={{ "min-width": "40px" }}
             >
-              Todas as datas
-          </button>
-            <div className="dropdown-menu">
-              <a className="dropdown-item" href="#">
-                Action
-            </a>
-              <a className="dropdown-item" href="#">
-                Another action
-            </a>
-              <a className="dropdown-item" href="#">
-                Something else here
-            </a>
-              <div className="dropdown-divider" />
-              <a className="dropdown-item" href="#">
-                Separated link
-            </a>
-            </div>
+              <option>Todas as datas</option>
+              <option>Hoje</option>
+              <option>Amanha</option>
+              <option>Esta semana</option>
+              <option>Este fim de semana</option>
+              <option>Proxima semana</option>
+              <option>Este mes</option>
+            </select>
           </div>
           <button type="button" class="btn btn-danger">
             Pesquisar
-        </button>
+          </button>
         </form>
       </div>
-  );
-};
-export default Search;
+    );
+  }
+}
