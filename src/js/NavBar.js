@@ -30,11 +30,6 @@ export default class NavBar extends Component {
     this.query = e.target.value;
   }
 
-  verifyHandler() {
-    if (localStorage.getItem("auth-token") === null) {
-      alert("Voce precisa estar logado!");
-    }
-  }
   componentDidMount() {
     const requestInfo = {
       method: "GET",
@@ -66,19 +61,18 @@ export default class NavBar extends Component {
           <li className="nav-item active" style={{ "margin-left": "90px" }}>
             <button
               className="btn btn-outline-success"
-              href="#"
               data-toggle="modal"
               data-target="#login-modal"
             >
-              Login <span className="sr-only">(current)</span>
+              Login
             </button>
 
             <button
               class="btn btn-outline-primary"
-              href="#"
               role="button"
               style={{ "margin-left": "10px" }}
-              handleSubmit={this.verifyHandler}
+              data-toggle="modal"
+              data-target="#login-modal"
             >
               +CRIAR EVENTO
             </button>

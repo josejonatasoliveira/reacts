@@ -30,7 +30,7 @@ export default class Modal extends Component {
     fetch("https://reqres.in/api/login", requestInfo)
       .then(response => {
         if (response.ok) {
-          return response.text();
+          return response.text;
         } else {
           console.log("Error");
         }
@@ -44,6 +44,7 @@ export default class Modal extends Component {
       });
   }
 
+  //Funcao para cadastro de usuarios
   signup(event) {
     const requestInfo = {
       method: "POST",
@@ -64,13 +65,13 @@ export default class Modal extends Component {
       response => {
         if (response.ok) {
           console.log(response);
-          return response.text();
+          return response.text;
         } else {
           alert("Erro ao salvar");
         }
       }
     );
-  }
+  } //Fim da funcao de cadastro de usuarios
 
   render() {
     return (
@@ -362,7 +363,16 @@ $(function() {
       case "login-form":
         var $lg_username = $("#login_username").val();
         var $lg_password = $("#login_password").val();
-        if (this.response == undefined) {
+        if (this.response) {
+          msgChange(
+            $("#div-login-msg"),
+            $("#icon-login-msg"),
+            $("#text-login-msg"),
+            "success",
+            "glyphicon-ok",
+            "Login ok"
+          );
+        } else {
           msgChange(
             $("#div-login-msg"),
             $("#icon-login-msg"),
@@ -370,15 +380,6 @@ $(function() {
             "error",
             "glyphicon-remove",
             "Login error"
-          );
-        } else {
-          msgChange(
-            $("#div-login-msg"),
-            $("#icon-login-msg"),
-            $("#text-login-msg"),
-            "success",
-            "glyphicon-ok",
-            "Login OK"
           );
         }
         return false;
