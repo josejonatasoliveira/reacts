@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import NavBar from './js/NavBar'
-import Search from './js/Search'
-import Carousel from './js/Carousel'
-import Modal from './js/Modal'
-import Eventos from './js/Eventos'
-import './css/style.css'
-import Particles from 'react-particles-js';
-
+import React, { Component } from "react";
+import "./App.css";
+import NavBar from "./js/NavBar";
+import Search from "./js/Search";
+import Carousel from "./js/Carousel";
+import Modal from "./js/Modal";
+import Eventos from "./js/Eventos";
+import "./css/style.css";
+import Particles from "react-particles-js";
 
 class App extends Component {
   render() {
@@ -16,11 +15,9 @@ class App extends Component {
         <NavBar />
         <Search />
         <Carousel />
-        <Modal/>
-        <Eventos/>
-        <div id="main">
-          {this.props.children}
-        </div>
+        <Modal />
+        <Eventos />
+        <div id="main">{this.props.children}</div>
       </div>
     );
   }
