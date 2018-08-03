@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./js/NavBar";
 import Search from "./js/Search";
+import CriarEvento from "./js/CriarEvento";
 import Carousel from "./js/Carousel";
 import Modal from "./js/Modal";
 import Eventos from "./js/Eventos";
@@ -16,7 +17,9 @@ class App extends Component {
         <Search />
         <Carousel />
         <Modal />
+        <CriarEvento />
         <Eventos />
+
         <div id="main">{this.props.children}</div>
       </div>
     );

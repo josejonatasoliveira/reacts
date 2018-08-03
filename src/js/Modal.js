@@ -19,7 +19,7 @@ export default class Modal extends Component {
     const requestInfo = {
       method: "POST",
       body: JSON.stringify({
-        email: this.login.value,
+        username: this.login.value,
         password: this.senha.value
       }),
       headers: new Headers({
@@ -27,16 +27,17 @@ export default class Modal extends Component {
       })
     };
 
-    fetch("https://reqres.in/api/login", requestInfo)
+    fetch("http://localhost:8080/api/signin", requestInfo)
       .then(response => {
         if (response.ok) {
-          return response.text;
+          return response.text();
         } else {
           console.log("Error");
         }
       })
       .then(token => {
         localStorage.setItem("auth-token", token);
+        console.log(token);
         browserHistory.push("/");
       })
       .catch(error => {

@@ -6,6 +6,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import { Router, Route, browserHistory } from "react-router";
 import Modal from "./js/Modal";
 import NavBar from "./js/NavBar";
+import CriarEvento from "./js/CriarEvento";
 import { matchPattern } from "react-router/lib/PatternUtils";
 import Logout from "./js/Logout";
 
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/navbar(/:modal)" component={Modal} />
       <Route path="/navbar" component={NavBar} />
       <Route path="/logout" component={Logout} />
+      <Route path="/criar-evento" component={CriarEvento} />
     </Route>
   </Router>,
   document.getElementById("root")
